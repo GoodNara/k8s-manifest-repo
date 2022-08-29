@@ -1,0 +1,37 @@
+EKS CloudWatch Container Insights 사용하기
+https://catalog.us-east-1.prod.workshops.aws/workshops/9c0aa9ab-90a9-44a6-abe1-8dff360ae428/ko-KR/90-monitoring/100-build-insight
+
+
+실습4-13. CloudWatch Container
+https://brunch.co.kr/@topasvga/1887
+
+
+컨테이너 인사이트를 사용하여 Kubernetes 클러스터 성능 모니터링
+https://docs.microsoft.com/ko-kr/azure/azure-monitor/containers/container-insights-analyze
+
+
+EKS to CloudWatch 모니터링 환경 구성
+https://may9noy.tistory.com/519
+
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+pod Autoscaling 
+https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/horizontal-pod-autoscaler.html
+
+
+karpenter
+https://karpenter.sh/
+
+
+쿠버네티스 (15) | 오토스케일링
+https://moozii-study.tistory.com/entry/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-15-%EC%98%A4%ED%86%A0%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81
+
+
+포드와 클러스터 노드의 오토스케일링
+https://clarkshim.tistory.com/128
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+쿠버네티스 web, was 구성
