@@ -9760,14 +9760,14 @@ spec:
               operator: In
               values:
               - ap-northeast-2c
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/part-of: argocd
-              topologyKey: kubernetes.io/hostname
-            weight: 5
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd
       containers:
       - command:
         - /shared/argocd-dex
@@ -9900,20 +9900,14 @@ spec:
                 operator: In
                 values:
                 - ap-northeast-2c
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/name: argocd-redis
-              topologyKey: kubernetes.io/hostname
-            weight: 100
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/part-of: argocd
-              topologyKey: kubernetes.io/hostname
-            weight: 5
+       preferredDuringSchedulingIgnoredDuringExecution:
+       - weight: 1
+         preference:
+           matchExpressions:
+           - key: disktype
+             operator: In
+             values:
+             - ssd
       containers:
       - args:
         - --save
@@ -9961,20 +9955,14 @@ spec:
                 operator: In
                 values:
                 - ap-northeast-2c
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/name: argocd-repo-server
-              topologyKey: kubernetes.io/hostname
-            weight: 100
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/part-of: argocd
-              topologyKey: kubernetes.io/hostname
-            weight: 5
+       preferredDuringSchedulingIgnoredDuringExecution:
+       - weight: 1
+         preference:
+           matchExpressions:
+           - key: disktype
+             operator: In
+             values:
+             - ssd
       automountServiceAccountToken: false
       containers:
       - command:
@@ -10198,20 +10186,14 @@ spec:
                 operator: In
                 values:
                 - ap-northeast-2c
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/name: argocd-server
-              topologyKey: kubernetes.io/hostname
-            weight: 100
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/part-of: argocd
-              topologyKey: kubernetes.io/hostname
-            weight: 5
+       preferredDuringSchedulingIgnoredDuringExecution:
+       - weight: 1
+         preference:
+           matchExpressions:
+           - key: disktype
+             operator: In
+             values:
+             - ssd
       containers:
       - command:
         - argocd-server
@@ -10466,20 +10448,14 @@ spec:
                 operator: In
                 values:
                 - ap-northeast-2c
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/name: argocd-application-controller
-              topologyKey: kubernetes.io/hostname
-            weight: 100
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app.kubernetes.io/part-of: argocd
-              topologyKey: kubernetes.io/hostname
-            weight: 5
+       preferredDuringSchedulingIgnoredDuringExecution:
+       - weight: 1
+         preference:
+           matchExpressions:
+           - key: disktype
+             operator: In
+             values:
+             - ssd
       containers:
       - command:
         - argocd-application-controller
