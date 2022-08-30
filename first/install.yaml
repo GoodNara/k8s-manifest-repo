@@ -9694,8 +9694,6 @@ spec:
               fieldPath: metadata.namespace
         image: quay.io/argoproj/argocd:v2.4.11
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         name: argocd-applicationset-controller
         ports:
         - containerPort: 7000
@@ -9755,7 +9753,7 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
@@ -9768,8 +9766,6 @@ spec:
         - rundex
         image: ghcr.io/dexidp/dex:v2.32.0
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         name: dex
         ports:
         - containerPort: 5556
@@ -9835,8 +9831,6 @@ spec:
         - argocd-notifications
         image: quay.io/argoproj/argocd:v2.4.11
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         livenessProbe:
           tcpSocket:
             port: 9001
@@ -9891,7 +9885,7 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
@@ -9912,8 +9906,6 @@ spec:
         - "no"
         image: redis:7.0.4-alpine
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         name: redis
         ports:
         - containerPort: 6379
@@ -9946,7 +9938,7 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
@@ -10064,8 +10056,6 @@ spec:
           value: /helm-working-dir
         image: quay.io/argoproj/argocd:v2.4.11
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -10177,7 +10167,7 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
@@ -10358,8 +10348,6 @@ spec:
               optional: true
         image: quay.io/argoproj/argocd:v2.4.11
         imagePullPolicy: Always
-      nodeSelector:
-        disktype: ssd
         livenessProbe:
           httpGet:
             path: /healthz?full=true
@@ -10439,7 +10427,7 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
