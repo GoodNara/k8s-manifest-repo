@@ -9531,10 +9531,10 @@ spec:
     port: 8080
     protocol: TCP
     targetPort: metrics
-  selector:
-    app.kubernetes.io/name: argocd-applicationset-controller
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-applicationset-controller
 ---
 apiVersion: v1
 kind: Service
@@ -9558,10 +9558,10 @@ spec:
     port: 5558
     protocol: TCP
     targetPort: 5558
-  selector:
-    app.kubernetes.io/name: argocd-dex-server
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-dex-server
 ---
 apiVersion: v1
 kind: Service
@@ -9577,10 +9577,10 @@ spec:
     port: 8082
     protocol: TCP
     targetPort: 8082
-  selector:
-    app.kubernetes.io/name: argocd-application-controller
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-application-controller
 ---
 apiVersion: v1
 kind: Service
@@ -9594,10 +9594,10 @@ spec:
     port: 9001
     protocol: TCP
     targetPort: 9001
-  selector:
-    app.kubernetes.io/name: argocd-notifications-controller
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-notifications-controller
 ---
 apiVersion: v1
 kind: Service
@@ -9612,10 +9612,10 @@ spec:
   - name: tcp-redis
     port: 6379
     targetPort: 6379
-  selector:
-    app.kubernetes.io/name: argocd-redis
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-redis
 ---
 apiVersion: v1
 kind: Service
@@ -9635,10 +9635,10 @@ spec:
     port: 8084
     protocol: TCP
     targetPort: 8084
-  selector:
-    app.kubernetes.io/name: argocd-repo-server
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-repo-server
 ---
 apiVersion: v1
 kind: Service
@@ -9658,10 +9658,10 @@ spec:
     port: 443
     protocol: TCP
     targetPort: 8080
-  selector:
-    app.kubernetes.io/name: argocd-server
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-server
 ---
 apiVersion: v1
 kind: Service
@@ -9677,10 +9677,10 @@ spec:
     port: 8083
     protocol: TCP
     targetPort: 8083
-  selector:
-    app.kubernetes.io/name: argocd-server
   nodeSelector:
     disktype: ssd
+  selector:
+    app.kubernetes.io/name: argocd-server
 ---
 apiVersion: apps/v1
 kind: Deployment
